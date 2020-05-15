@@ -34,7 +34,7 @@ def main():
                 transforms.RandomAffine(degrees=90, translate=(0.25, 0.25)),
                 transforms.RandomHorizontalFlip(),
                 transforms.RandomVerticalFlip(),
-                transforms.CenterCrop(128),
+                transforms.CenterCrop(200),
                 transforms.Resize(IMG_SIZE),
                 transforms.ToTensor(),
                 transforms.Normalize([0.485, 0.456, 0.406],

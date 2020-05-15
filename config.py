@@ -1,6 +1,6 @@
 # This is the size of the neural network input;
 # this is fixed by the network which was used to train this.
-IMG_SIZE = 128
+IMG_SIZE = 224
 
 # Batch Size
 BATCH_SIZE = 20

@@ -29,10 +29,9 @@ def get_files_from_path(pathstring):
 
     filenames = []
     for file in Path(pathstring).glob("**/*.png"):
-        filenames.append((file, file.stat().st_size,
-                          file.parts[-2], file.stem))
+        filenames.append((file, file.stat().st_size))
     files_df = pd.DataFrame(list(filenames),
-                            columns=["path", "filesize", "x", "y"])
+                            columns=["path", "filesize"])
     sorted_files = files_df.sort_values("filesize")
     result_df = sorted_files.reset_index(drop=True)
     return result_df
