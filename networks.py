@@ -23,7 +23,7 @@ class Loc2Vec(nn.Module):
         num_ftrs = 4608 # arrived at by looking at errors!
 
         # Resnet 50
-        num_ftrs = 18432 # arrived at by looking at errors!
+        num_ftrs = 100352 #18432 # arrived at by looking at errors!
         self.model.fc = nn.Linear(num_ftrs, 16)
 
     def forward(self, x):

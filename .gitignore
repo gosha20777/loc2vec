@@ -126,3 +126,4 @@ tensorboard/
 
 #model checkpoints
 model_checkpoints/
+*.pth

@@ -53,14 +53,15 @@ def cleanse_files(df_files):
         dataframe -- filtered dataframe with useless file sizes removed
     """
 
-    filtered_files = df_files[(df_files["filesize"] != 103) &
-                              (df_files["filesize"] != 306) &
-                              (df_files["filesize"] != 355) &
-                              (df_files["filesize"] != 2146) &
-                              (df_files["filesize"] != 2128) &
-                              (df_files["filesize"] != 2165) &
-                              (df_files["filesize"] != 2202)]
-    result = filtered_files.reset_index(drop=True)
+    #filtered_files = df_files[(df_files["filesize"] != 103) &
+    #                          (df_files["filesize"] != 306) &
+    #                          (df_files["filesize"] != 355) &
+    #                          (df_files["filesize"] != 2146) &
+    #                          (df_files["filesize"] != 2128) &
+    #                          (df_files["filesize"] != 2165) &
+    #                          (df_files["filesize"] != 2202)]
+    #result = filtered_files.reset_index(drop=True)
+    result = df_files
     count = result.filesize.value_counts()
     freq = 1./count
     freq_dict = freq.to_dict()
